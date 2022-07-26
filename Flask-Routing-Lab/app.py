@@ -8,9 +8,13 @@ app = Flask(  # Create a flask app
 )
 
 # Your code should be below
+@app.route('/')
+def hello_world():
+    return render_template("home.html")
 
-
-
+@app.route('slay')
+def slayer():
+    return render_template('product.html')
 
 # Your code should be above
 
